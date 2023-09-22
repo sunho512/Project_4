@@ -8,4 +8,5 @@ data class SearchResponse(
     val documents: ArrayList<Document>,
     @SerializedName("meta")
     val meta: Meta
+
 )

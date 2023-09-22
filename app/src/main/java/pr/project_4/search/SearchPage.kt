@@ -16,6 +16,7 @@ import pr.project_4.data.Document
 import pr.project_4.data.SearchResponse
 import pr.project_4.data.Utils
 import pr.project_4.databinding.FragmentSearchPageBinding
+import pr.project_4.model.SearchItemModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -27,7 +28,7 @@ class SearchPage : Fragment() {
     private lateinit var adapter: SearchAdapter
     private lateinit var gridmanager: StaggeredGridLayoutManager
 
-    private var resItems: ArrayList<Document> = ArrayList()
+    private var resItems: ArrayList<SearchItemModel> = ArrayList()
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -84,7 +85,7 @@ class SearchPage : Fragment() {
                                 val title = document.displaySitename
                                 val datetime = document.datetime
                                 val url = document.thumbnailUrl
-                                resItems.add(Document(title, datetime, url))
+                                resItems.add(SearchItemModel(title, datetime, url))
                             }
                         }
                     }

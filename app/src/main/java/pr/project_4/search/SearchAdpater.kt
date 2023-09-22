@@ -1,6 +1,7 @@
 package pr.project_4.search
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,14 +10,14 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import pr.project_4.data.Document
 import pr.project_4.data.Utils.getDateFromTimestampWithFormat
 import pr.project_4.databinding.ItemBinding
+import pr.project_4.model.SearchItemModel
 
 class SearchAdapter(private val mContext: Context) :
     RecyclerView.Adapter<SearchAdapter.ItemViewHolder>() {
 
-    var items = ArrayList<Document>()
+    var items = ArrayList<SearchItemModel>()
     fun clearItem() {
         items.clear()
         notifyDataSetChanged()
@@ -31,12 +32,13 @@ class SearchAdapter(private val mContext: Context) :
         val currentItem = items[position]
 
         Glide.with(mContext)
-            .load(currentItem.thumbnailUrl)
+            .load(currentItem.url)
             .into(holder.search_image)
+        Log.d("Thumbnail URL", "좀 나와라: ${currentItem.url}")
 
-        holder.tv_title.text = currentItem.displaySitename
+        holder.tv_title.text = currentItem.title
         holder.tv_datetime.text = getDateFromTimestampWithFormat(
-            currentItem.datetime,
+            currentItem.dateTime,
             "yyyy-MM-dd'T'HH:mm:ss.SSS+09:00",
             "yyyy-MM-dd HH:mm:ss"
         )
