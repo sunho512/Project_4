@@ -1,17 +1,13 @@
-package com.android.a11
+package pr.project_4
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import pr.project_4.BuildConfig
-import pr.project_4.NetWorkInterface
+import pr.project_4.Constants.Search_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 object NetWorkClient {
-
-    private const val Search_URL = "https://dapi.kakao.com/v2/search/image"
-
 
     private fun createOkHttpClient(): OkHttpClient {
         val interceptor = HttpLoggingInterceptor()
@@ -28,7 +24,6 @@ object NetWorkClient {
             .addNetworkInterceptor(interceptor)
             .build()
     }
-
     private val SearchRetrofit = Retrofit.Builder()
         .baseUrl(Search_URL)
         .addConverterFactory(GsonConverterFactory.create())
@@ -40,7 +35,7 @@ object NetWorkClient {
 }object Constants {
 
     // Kakao Image Search API의 기본 URL입니다.
-    const val Search_URL = "https://dapi.kakao.com"
+    const val Search_URL = "https://dapi.kakao.com/"
 
     // Kakao API를 사용하기 위한 인증 헤더입니다.
     const val AUTH_HEADER = "KakaoAK 7581f80aa0c7a862f5cd0af5865d9511"

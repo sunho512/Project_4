@@ -13,14 +13,10 @@ import pr.project_4.data.Document
 import pr.project_4.data.Utils.getDateFromTimestampWithFormat
 import pr.project_4.databinding.ItemBinding
 
-/**
- * 이미지 검색 결과를 표시하는 어댑터 클래스입니다.
- */
 class SearchAdapter(private val mContext: Context) :
     RecyclerView.Adapter<SearchAdapter.ItemViewHolder>() {
 
     var items = ArrayList<Document>()
-
     fun clearItem() {
         items.clear()
         notifyDataSetChanged()

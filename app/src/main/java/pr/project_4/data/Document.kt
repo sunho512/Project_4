@@ -10,7 +10,7 @@ data class Document(
     @SerializedName("display_sitename")
     val displaySitename: String?,
     @SerializedName("doc_url")
-    val docUrl: Comparable<*>? = null, // 기본값으로 null을 제공
+    val docUrl: String? = null, // 기본값으로 null을 제공
     @SerializedName("height")
     val height: String? = null, // 기본값으로 null을 제공
     @SerializedName("image_url")

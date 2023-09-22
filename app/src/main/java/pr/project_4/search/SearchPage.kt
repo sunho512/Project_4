@@ -10,8 +10,8 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.android.a11.Constants
-import com.android.a11.NetWorkClient.SearchNetWork
+import pr.project_4.Constants
+import pr.project_4.NetWorkClient.SearchNetWork
 import pr.project_4.data.Document
 import pr.project_4.data.SearchResponse
 import pr.project_4.data.Utils
@@ -93,7 +93,7 @@ class SearchPage : Fragment() {
                 }
 
                 override fun onFailure(call: Call<SearchResponse?>, t: Throwable) {
-                    Log.e("#jblee", "onFailure: ${t.message}")
+                    Log.e("#아 화딱지나네", "응 실패야: ${t.message}")
                 }
             })
     }
