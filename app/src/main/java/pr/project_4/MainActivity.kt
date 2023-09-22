@@ -15,10 +15,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.apply {
-            fragment1Btn.setOnClickListener{
+            abcd.setOnClickListener{
                 setFragment(SearchPage())
             }
-            fragment2Btn.setOnClickListener {
+            efg.setOnClickListener {
                 setFragment(SafeKeepingPage())
             }
         }

@@ -4,59 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E9FFD9"
     tools:context=".MainActivity">
-
-<!--    <TextView-->
-<!--        android:id="@+id/null1"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="70dp"-->
-<!--        android:background="#ECFAC8"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/editText"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_marginStart="15dp"-->
-<!--        android:layout_marginTop="15dp"-->
-<!--        android:layout_marginEnd="15dp"-->
-<!--        android:layout_marginBottom="15dp"-->
-<!--        android:background="@color/white"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/null1"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/search_btn"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--    <EditText-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_marginStart="10dp"-->
-<!--        android:background="@color/white"-->
-<!--        android:hint="검색할 내용을 입력해 주세요!"-->
-<!--        android:maxLines="1"-->
-<!--        android:textSize="14dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/editText"-->
-<!--        app:layout_constraintEnd_toEndOf="@+id/editText"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/editText"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/editText" />-->
-
-<!--    <androidx.appcompat.widget.AppCompatButton-->
-<!--        android:id="@+id/search_btn"-->
-<!--        android:layout_width="100dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:layout_marginEnd="10dp"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        android:background="#BDEAB9"-->
-<!--        android:text="검 색"-->
-<!--        android:textSize="20dp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/null1"-->
-<!--        app:layout_constraintEnd_toEndOf="@+id/null1"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -64,47 +12,39 @@
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/fragment1_btn"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/abcd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+    </FrameLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="#FBFFEC"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/fragment1_btn"
+        android:id="@+id/abcd"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:background="#E8FBE2"
         android:text="⬅  검색 결과"
         android:textAllCaps="false"
         android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/fragment2_btn"
+        app:layout_constraintEnd_toStartOf="@+id/efg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/fragment2_btn"
+        android:id="@+id/efg"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="#E8FBE2"
         android:text="내 보관함  ⮕"
         android:textAllCaps="false"
         android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/fragment1_btn"
+        app:layout_constraintStart_toEndOf="@+id/abcd"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
